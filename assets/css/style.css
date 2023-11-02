@@ -560,7 +560,10 @@ main {
  * #testimonials 
  */
 
-.testimonials { margin-bottom: 30px; }
+.testimonials { 
+  margin-bottom: 30px;
+  display: none;
+}
 
 .testimonials-title { margin-bottom: 20px; }
 
@@ -726,7 +729,10 @@ main {
  * #clients 
  */
 
-.clients { margin-bottom: 15px; }
+.clients { 
+  margin-bottom: 15px;
+  display: none;
+}
 
 .clients-list {
   display: flex;
