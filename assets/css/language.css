@@ -1,0 +1,79 @@
+
+  .floating-menu {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--orange-yellow-crayola);
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+
+  .floating-menu input {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .floating-menu input:checked ~ .floating-nav li:nth-child(1) {
+    transform: translatex(-44px);
+  }
+
+  .floating-menu input:checked ~ .floating-nav li:nth-child(2) {
+    transform: translatex(-84px);
+  }
+
+  .floating-menu input ~ .plus-icon {
+    transform: rotate(0);
+  }
+  
+  .floating-menu > .plus-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--white-1);
+    background: var(--orange-yellow-crayola);
+    border-radius: 50%;
+    transform: rotate(0);
+    transition: all 0.5s ease;
+    pointer-events: none;
+    position: absolute;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .floating-menu > .plus-icon img,
+  .floating-nav li img {
+    width: 30px;
+  }
+
+  .floating-menu > .floating-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  .floating-menu > .floating-nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--orange-yellow-crayola);
+    cursor: pointer;
+    position: absolute;
+    transition: all 0.5s ease;
+  }
