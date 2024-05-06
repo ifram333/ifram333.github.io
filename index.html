@@ -24,6 +24,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -854,7 +856,7 @@
 
           <h3 class="h3 form-title" data-i18n="contact.form"></h3>
 
-          <form action="#" class="form" data-form>
+          <form action="https://formspree.io/f/mjvnlzdl" class="form" data-form method="POST">
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder data-i18n="contact.fullname" required data-form-input>
@@ -863,6 +865,8 @@
             </div>
 
             <textarea name="message" class="form-input" placeholder data-i18n="contact.message" required data-form-input></textarea>
+
+            <div class="g-recaptcha" data-sitekey="6LebgdMpAAAAADVCNoUuZdgnpDdRlN57BxzifA8f"></div> <!-- replace with your recaptcha SITE key not secret key -->
 
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
