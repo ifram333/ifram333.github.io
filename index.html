@@ -146,6 +146,12 @@
             </a>
           </li>
 
+          <li class="social-item">
+            <a href="https://wa.me/573057365930?text=Hi%20Iván" target="_blank" class="social-link">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
         </ul>
 
       </div>
@@ -180,6 +186,10 @@
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link="portfolio" data-i18n="navbar.portfolio"></button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="contacto" data-i18n="navbar.contact"></button>
           </li>
 
         </ul>
@@ -830,38 +840,38 @@
       <article class="contact" data-page="contacto">
 
         <header>
-          <h2 class="h2 article-title">Contáctame</h2>
+          <h2 class="h2 article-title" data-i18n="contact.title"></h2>
         </header>
 
         <section class="mapbox" data-mapbox>
           <figure>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              src="https://www.google.com/maps/embed/v1/place?q=Cali&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
               width="400" height="300" loading="lazy"></iframe>
           </figure>
         </section>
 
         <section class="contact-form">
 
-          <h3 class="h3 form-title">Contact Form</h3>
+          <h3 class="h3 form-title" data-i18n="contact.form"></h3>
 
           <form action="#" class="form" data-form>
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" name="fullname" class="form-input" placeholder data-i18n="contact.fullname" required data-form-input>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder data-i18n="contact.email" required data-form-input>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea name="message" class="form-input" placeholder data-i18n="contact.message" required data-form-input></textarea>
 
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
+              <span data-i18n="contact.send"></span>
             </button>
 
           </form>
-
+ 
         </section>
 
       </article>

@@ -61,19 +61,20 @@ function translate(selectedLanguage) {
       "navbar": {
         "about": "About",
         "resume": "Resume",
-        "portfolio": "Portfolio"
+        "portfolio": "Portfolio",
+        "contact": "Contact"
       },
 
       "about": {
         "title": "About me",
-        "p1": "I am a Systems and Computer Science Engineer from Cali, Colombia, working in test automation. I enjoy seeing the test cases I have designed come to life and run automatically on mobile devices and web browsers.",
-        "p2": "My job is to ensure that the quality of the software we are developing is the highest, ensuring that functional and design findings are minimized when making a release.",
+        "p1": "Bilingual Systems and Computer Science Engineer. I have 5+ years of experience in test automation for mobile devices and web applications with Java and Python programming languages and Selenium and Appium frameworks.",
+        "p2": "Critical Thinker - Responsible - Mentoring",
         "service": "What am I doing?",
         "service1": "Tests cases design",
         "service1-description": "Design test cases for all possible scenarios.",
         "service2": "Tests data preparation",
         "service2-description": "Prepare the test data necessary for execution.",
-        "service3": "Testing execution",
+        "service3": "Tests execution",
         "service3-description": "Execute test cases and report findings.",
         "service4": "Tests automation",
         "service4-description": "Automate test cases on mobile devices or browsers."
@@ -82,8 +83,8 @@ function translate(selectedLanguage) {
       "resume": {
         "title": "My resume",
         "studies": "Studies",
-        "studies1": "Pontificia Universidad Javeriana - Cali",
-        "studies1-description": "Systems and Computer Science Engineer with emphasis on video games.",
+        "studies1": "Pontificia Universidad Javeriana",
+        "studies1-description": "Systems and Computer Science Engineer.",
         "studies2": "Tulio Enrique Tascón educational institution",
         "studies2-description": "Commercial high School."
       },
@@ -131,6 +132,15 @@ function translate(selectedLanguage) {
         "title": "My portfolio",
         "all": "All",
         "category": "Select Category"
+      },
+
+      "contact": {
+        "title": "Contact Me",
+        "form": "Contact Form",
+        "send": "Send Message",
+        "fullname": "Full Name",
+        "email": "Email Address",
+        "message": "Your Message"
       }
     },
 
@@ -149,13 +159,14 @@ function translate(selectedLanguage) {
       "navbar": {
         "about": "Acerca De",
         "resume": "Currículum",
-        "portfolio": "Proyectos"
+        "portfolio": "Proyectos",
+        "contact": "Contacto"
       },
 
       "about": {
         "title": "Acerca de mí",
-        "p1": "Yo soy ingeniero de sistemas y ciencias de la computación de Cali, Colombia, trabajando en automatización de pruebas. Disfruto de ver como los casos de pruebas que he diseñado, cobran vida y son ejecutados automáticamente en dispositivos móviles y navegadores web.",
-        "p2": "Mi trabajo es asegurar que la calidad del software que estamos desarrollando sea la más alta, asegurando que los hallazgos funcionales y de diseño sean minimizados al momento de hacer un release.",
+        "p1": "Ingeniero de Sistemas y Ciencias de la Computación bilingüe. Tengo más de 5 años de experiencia en automatización de pruebas para dispositivos móviles y aplicaciones web con los lenguajes de programación Java y Python y los frameworks Selenium y Appium.",
+        "p2": "Pensador Crítico - Responsable - Mentoría",
         "service": "¿Qué hago?",
         "service1": "Diseño de casos de prueba",
         "service1-description": "Diseñar los casos de pruebas para todos los escenarios posibles.",
@@ -170,8 +181,8 @@ function translate(selectedLanguage) {
       "resume": {
         "title": "Mi currículum",
         "studies": "Educación",
-        "studies1": "Pontificia Universidad Javeriana - Cali",
-        "studies1-description": "Ingeniero de Sistemas y Ciencias de la Computación con énfasis en video juegos.",
+        "studies1": "Pontificia Universidad Javeriana",
+        "studies1-description": "Ingeniero de Sistemas y Ciencias de la Computación",
         "studies2": "Institución educativa Tulio Enrique Tascón",
         "studies2-description": "Bachiller comercial."
       },
@@ -219,6 +230,15 @@ function translate(selectedLanguage) {
         "title": "Mis proyectos",
         "all": "Todos",
         "category": "Seleccionar Categoría"
+      },
+
+      "contact": {
+        "title": "Contáctame",
+        "form": "Formulario de Contacto",
+        "send": "Enviar Mensaje",
+        "fullname": "Nombre Completo",
+        "email": "Correo Electrónico",
+        "message": "Tu Mensaje"
       }
     },
 
@@ -258,7 +278,12 @@ function translate(selectedLanguage) {
     }
 
     // Regular text replacement for given locale.
-    element.innerHTML = text;
+
+    if(element.hasAttribute("placeholder")) {
+      element.setAttribute("placeholder", text);
+    } else {
+      element.innerHTML = text;
+    }
   });
 }
 
